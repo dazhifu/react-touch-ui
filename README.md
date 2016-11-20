@@ -1,10 +1,16 @@
 react 移动开发框架
 ------------
 
-* 将常用控件封装成件，开发者无需css,html开发.只需要专注js逻辑开发
+* 基于 React.js 的移动端 Web 组件库,使开发者只需专注js业务逻辑,无需html5,css开发
 * 采用 mvc 架构, ios controller 窗体机制,页面跳转,逻辑更加清晰。
 * 采用 flexbox 布局。布局更简单方便。
 * 支持单页面和页面应用,entries 里面可以放多个入口。这样同时支持微信公众号,应用内嵌,cordova 混合应用开发场景。
+
+
+演示
+------------
+https://dazhifu.github.io/react-touch-ui/
+
 
 环境要求
 ------------
