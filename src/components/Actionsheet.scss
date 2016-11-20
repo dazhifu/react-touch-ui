@@ -1,0 +1,98 @@
+$auiActionSheetAndroidBorderRadius: 2px;
+$auiBgColorDefault: #EFEFF4;
+$auiBgColorActive: #ECECEC;
+$auiCellBorderColor:#D9D9D9;
+
+@mixin aui-setTopLine($c: #C7C7C7) {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid $c;
+    color: $c;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+}
+.aui-actionsheet {
+    position: fixed;
+    left: 0;
+    bottom:0;
+    transform: translate(0, 100%);
+    backface-visibility: hidden;
+    z-index: 5000;
+    width: 100%;
+    background-color: $auiBgColorDefault;
+    //slide up animation
+    transition: transform .3s;
+}
+.aui-actionsheet__menu{
+    background-color: #FFFFFF;
+}
+.aui-actionsheet__action {
+    margin-top: 6px;
+    background-color: #FFFFFF;
+}
+.aui-actionsheet__cell {
+    position: relative;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    &:before {
+        @include aui-setTopLine($auiCellBorderColor);
+    }
+    &:active{
+        background-color: $auiBgColorActive;
+    }
+    &:first-child{
+        &:before{
+            //display: none;
+        }
+    }
+}
+
+
+//android actionSheet
+.aui-skin_android{
+    .aui-actionsheet {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        //padding: 0 40px;
+        width: 274px;
+        box-sizing: border-box;
+        backface-visibility: hidden;
+        background: transparent;
+        //slide up animation
+        transition: transform .3s;
+    }
+    .aui-actionsheet__action{
+        display: none;
+    }
+    .aui-actionsheet__menu {
+        border-radius: $auiActionSheetAndroidBorderRadius;
+        box-shadow: 0 6px 30px 0 rgba(0,0,0,.1);
+    }
+    .aui-actionsheet__cell {
+        padding: 13px 24px;
+        font-size: 16px;
+        line-height: 1.4;
+        text-align: left;
+        &:first-child {
+            border-top-left-radius: $auiActionSheetAndroidBorderRadius;
+            border-top-right-radius: $auiActionSheetAndroidBorderRadius;
+        }
+        &:last-child {
+            border-bottom-left-radius: $auiActionSheetAndroidBorderRadius;
+            border-bottom-right-radius: $auiActionSheetAndroidBorderRadius;
+        }
+    }
+}
+
+//actionSheet aniamtion
+.aui-actionsheet_toggle{
+    transform: translate(0, 0);
+}

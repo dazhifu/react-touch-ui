@@ -1,0 +1,38 @@
+
+@import "common/Config";
+
+
+.aui-button {
+  display: inline-block;
+
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+
+  user-select: none;
+  transition: .25s ease-out;
+  font-family: inherit;
+  font-size: 100%;
+  padding: $button-padding;
+
+
+  text-decoration: none;
+  border-radius: $button-radius;
+ // width: 100px;
+
+  &:active {
+    background-color: darken($button-color, 8%);
+  }
+
+  &[disabled] {
+    border: none;
+    background-image: none;
+    -khtml-opacity: $button-opacity-disabled;
+    -moz-opacity: $button-opacity-disabled;
+    opacity: $button-opacity-disabled;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+}
+

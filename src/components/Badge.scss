@@ -1,0 +1,29 @@
+
+@import "common/Config";
+
+// --------------------------------------------------
+.aui-badge {
+  display: inline-block;
+  padding: $badge-padding;
+  user-select: none;
+  border-radius: 100px;
+  vertical-align: middle;
+  text-align: center;
+  line-height:$badge-height;
+  height: $badge-height;
+
+  &:active {
+    background-color: darken($button-color, 8%);
+  }
+
+  &[disabled] {
+    border: none;
+    background-image: none;
+    -khtml-opacity: $button-opacity-disabled;
+    -moz-opacity: $button-opacity-disabled;
+    opacity: $button-opacity-disabled;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+}

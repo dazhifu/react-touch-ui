@@ -1,0 +1,27 @@
+@import "common/Config";
+
+.aui-textarea {
+
+  width: 100%;
+  height: 100px;
+  -webkit-appearance: none;
+  border: none;
+  background-color: rgba(0, 0, 0, .0);
+  outline: none;
+  resize: none;
+  // -webkit-user-select: text;
+}
+
+.aui-textarea-outline {
+  //boxSizing: 'border-box';
+  //width: 100%;
+  //height: 40px;
+  padding: 6px;
+  overflow:hidden;
+  border: none;
+  //background-color: #00f;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 3px;
+
+  //-webkit-user-select: text;
+}

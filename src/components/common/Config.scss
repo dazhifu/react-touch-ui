@@ -1,0 +1,87 @@
+
+
+$namespace: "au"  !default;    //命名空间
+
+
+
+$app-theme-color :#BF002E;   // 应用主题风格
+
+
+$base-font-size: 100% !default;
+
+// Define default font weights
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+$font-size-default: 16px !default;
+// Font-families
+// @see https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+$font-family-sans-serif: /* 1 */ -apple-system, BlinkMacSystemFont,
+  /* 2 */ "PingFang SC", "Hiragino Sans GB", "Segoe UI", "Microsoft YaHei", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "wenquanyi micro hei",
+  /* 3 */ "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: Georgia, "Times New Roman", Times, SimSun, serif !default; // FangSong, STFangSong
+$font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+
+
+// -----------------------------------------------------------------------------
+// Components Variables
+// -----------------------------------------------------------------------------
+
+
+
+
+
+// Button Variables
+// -----------------------------------------------------------------------------
+
+$button-padding: 0em 1em !default; // 10px 15px
+$button-font-color: #fff !default;   // 字颜色
+$button-height: 45px !default;   // 字颜色
+$button-color: #BF002E !default;        // 背景颜色
+$button-radius: 3px !default;
+$button-font-size: $font-size-default !default;
+$button-opacity-disabled: 0.5 !default;
+
+
+// Badge Variables
+// -----------------------------------------------------------------------------
+
+$badge-padding: 0em .5em !default;  // 10px 15px
+$badge-font-color: #fff !default;    // 字颜色
+$badge-height: 30px !default;        // 默认高度
+$badge-color: #BF002E !default;      // 背景颜色
+$badge-radius: 3px !default;
+$badge-font-size: $font-size-default !default;    // 默认字体大小
+$badge-opacity-disabled: 0.5 !default;
+
+// input Variables
+// -----------------------------------------------------------------------------
+
+
+$input-height: 38px !default;                        // 默认高度
+$input-background-color: rgba(0, 0, 0, .0) !default; // 背景颜色
+$input-border-color: rgba(0, 0, 0, .2) !default;     // 背景颜色
+$input-font-color: #333 !default;             // 字颜色
+$badge-font-size: $font-size-default !default;    // 默认字体大小
+$input-radius: 3px !default; // 背景颜色
+
+// Navbar Variables
+// -----------------------------------------------------------------------------
+$navbar-prefix: #{$namespace}navbar !default;
+$navbar-class-center: #{$navbar-prefix}-center !default;
+$navbar-class-left: #{$navbar-prefix}-left !default;
+$navbar-class-right: #{$navbar-prefix}-right !default;
+$navbar-class-title: #{$navbar-prefix}-title !default;
+
+$navbar-height-px: 44 !default;
+$navbar-height: $navbar-height-px !default;
+$navbar-center-width: 50% !default;
+$navbar-side-width: (100% - $navbar-center-width) / 2 !default;
+$navbar-background:  #eee !default;
+$navbar-color: #333 !default;
+$navbar-padding: 0 10 !default;
+$navbar-line-height: ($navbar-height-px - 1);
+
+.aui-select-no {
+  user-select: none;
+}

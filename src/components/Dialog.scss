@@ -1,0 +1,192 @@
+
+$auiDialogBackgroundColor: #FFFFFF;
+$auiDialogLineColor: #D5D5D6;
+$auiDialogLinkColor: #3CC51F;
+$auiDialogLinkActiveBc: #EEEEEE;
+$auiDialogGapWidth: 1.6em;
+$auiTextColorGray: #999999;
+
+$auiTextColorTitle: #000000;
+$auiTextColorTips: #B2B2B2;
+$auiTextColorWarn: #E64340;
+
+
+.aui-mask {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+}
+
+
+.aui-mask_transparent{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+@mixin aui-setTapColor($c:rgba(0,0,0,0)) {
+    -webkit-tap-highlight-color: $c;
+}
+
+@mixin  setLeftLine($c: #C7C7C7) {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-left: 1px solid $c;
+    color: $c;
+    transform-origin: 0 0;
+    transform: scaleX(0.5);
+}
+
+@mixin aui-setTopLine($c: #C7C7C7) {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid $c;
+    color: $c;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+}
+.aui-dialog {
+    position: fixed;
+    z-index: 5000;
+    width: 80%;
+    max-width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $auiDialogBackgroundColor;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.aui-dialog__hd {
+    padding: 1.3em $auiDialogGapWidth .5em;
+}
+.aui-dialog__title {
+    font-weight: 400;
+    font-size: 18px;
+}
+.aui-dialog__bd {
+    padding: 0 $auiDialogGapWidth .8em;
+    min-height: 40px;
+    font-size: 15px;
+    line-height: 1.3;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: $auiTextColorGray;
+    &:first-child{
+        padding:2.7em 20px 1.7em;
+        color:#353535;
+    }
+}
+.aui-dialog__ft {
+    position: relative;
+    line-height: 48px;
+    font-size: 18px;
+    display: flex;
+    &:after {
+        content: " ";
+        @include aui-setTopLine($auiDialogLineColor);
+    }
+}
+.aui-dialog__btn {
+    display: block;
+    flex: 1;
+    color: $auiDialogLinkColor;
+    text-decoration: none;
+    @include aui-setTapColor();
+    &:active {
+        background-color: $auiDialogLinkActiveBc;
+    }
+
+    position: relative;
+    &:after {
+        content: " ";
+        @include setLeftLine($auiDialogLineColor);
+    }
+    &:first-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+.aui-dialog__btn_default {
+    color: #353535;
+}
+.aui-dialog__btn_primary {
+    color: #0BB20C;
+}
+
+.aui-skin_android{
+    .aui-dialog {
+        text-align: left;
+        box-shadow: 0 6px 30px 0 rgba(0, 0, 0, .1);
+    }
+    .aui-dialog__title{
+        font-size: 21px;
+    }
+    .aui-dialog__hd{
+        text-align: left;
+    }
+    .aui-dialog__bd{
+        color:$auiTextColorGray;
+        padding:.25em $auiDialogGapWidth 2em;
+        font-size: 17px;
+        text-align: left;
+        &:first-child{
+            padding:1.6em $auiDialogGapWidth 2em;
+            color:#353535;
+        }
+    }
+    .aui-dialog__ft{
+        display: block;
+        text-align: right;
+        line-height: 42px;
+        font-size: 16px;
+        padding:0 $auiDialogGapWidth .7em;
+        &:after{
+            display: none;
+        }
+    }
+    .aui-dialog__btn{
+        display: inline-block;
+        vertical-align: top;
+        padding:0 .8em;
+        &:after{
+            display: none;
+        }
+
+        &:active{
+            background-color: rgba(0,0,0,.06);
+        }
+        &:visited{
+            background-color: rgba(0,0,0,.06);
+        }
+        &:last-child{
+            margin-right: -.8em;
+        }
+    }
+    .aui-dialog__btn_default {
+        color: #808080;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .aui-dialog {
+        width: 35%;
+    }
+}
