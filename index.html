@@ -1,80 +1,60 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />-->
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <title>React Touch UI</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-
-    //font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
-
-
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-
-    button,
-    input,
-    optgroup,
-    select,
-    textarea {
-      color: inherit; /* 1 */
-
-      padding: 0;
-      margin: 0; /* 3 */
-    }
-
-
-    .ReactNavigationControllerView,
-    .ReactNavigationControllerViewContent {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-
-    .aui-rootView-flex {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-    }
-
-    .aui-rootView-flex-v {
-      -webkit-box-orient: vertical;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-    }
-
-    .aui-rootView-flex-1 {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-    }
-  </style>
-  <script type="text/javascript" src="./cordova.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+        <title>Install Geoloqi</title>
+        <style type="text/css">
+                body {
+                        background: url(bkg.png) repeat #c5ccd4;
+                        font-family: Helvetica, arial, sans-serif;
+                }
+                .congrats {
+                        font-size: 16pt;
+                        padding: 6px;
+                        text-align: center;
+                }
+                .step {
+                        background: white;
+                        border: 1px #ccc solid;
+                        border-radius: 14px;
+                        padding: 4px 10px;
+                        margin: 10px 0;
+                }
+                .instructions {
+                        font-size: 10pt;
+                }
+                .arrow {
+                        font-size: 15pt;
+                }
+                table {
+                        width: 100%;
+                }
+        </style>
 </head>
 <body>
-<div id="root" class="wrap flex flex-v"></div>
-<!--
-  This HTML file is a template.
-  If you open it directly in the browser, you will see an empty page.
+ 
 
-  You can add webfonts, meta tags, or analytics to this file.
-  The build step will place the bundled scripts into the <body> tag.
 
-  To begin the development, run `npm start` in this folder.
-  To create a production bundle, use `npm run build`.
--->
+
+
+
+<div class="congrats">Congrats! You've been invited to the beta of Geoloqi.</div>
+ 
+<div class="step">
+        <table><tr>
+                <td class="instructions">Install the<br />人保寿</td>
+                <td width="24" class="arrow">→</td>
+                <td width="72" class="imagelink">
+                        <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/dazhifu/react-touch-ui/dazhifu-patch-1-1/test.plist">IPA下载</a>
+                </td>
+        </tr>
+        
+        
+
+        
+        </table>
+</div>
+ 
 </body>
 </html>
