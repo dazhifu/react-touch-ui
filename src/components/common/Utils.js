@@ -1,6 +1,6 @@
 // Set classes namespace, e.g. `am-`
 
-
+import  Config   from   "./Config.js"
 const kvSize = (key, x) => {
 
     if(x ===undefined) return;
@@ -8,7 +8,7 @@ const kvSize = (key, x) => {
     re =  /^\d+$/;
     r = re.exec(x);
     if (r) {
-        return {[key]: x+"px"}
+        return {[key]: x+ Config.sizeUnit}
     } else {
         return {[key]: x}
     }
@@ -22,7 +22,7 @@ const sizeUnit = ( x) => {
     re =  /^\d+$/;
     r = re.exec(x);
     if (r) {
-        return  x+"px"
+        return  x+Config.sizeUnit
     } else {
         return x
     }
@@ -57,8 +57,6 @@ const Utils = {
     colorDarken,
     log
 };
-
-
 
 export default Utils
 
