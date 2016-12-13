@@ -1,7 +1,25 @@
 // Set classes namespace, e.g. `am-`
-import Utils from   "./Utils.js"
+
+
+const colorDarken = ( color, darken) => {
+    if(color ===undefined) return;
+    var len = color.length;
+    var c = color.substring(1,len);
+
+    var newc = "#";
+    for(var i = 0; i<c.length; i++) {
+        var cc;
+        cc=   Math.round(parseInt('0x'+c.substring(i,i+1)) *darken);
+        newc =newc + cc.toString(16)
+    }
+    return newc;
+
+};
+
 
 const namespace = "au"; // 'am'
+
+var sizeUnit = "px";
 
 // 主题颜色
 var themeColor = "#f00";
@@ -15,7 +33,7 @@ var ButtonFontColor = "#fff";
 // 背景颜色
 var ButtonBgColor = themeColor;
 // 激活颜色
-var ButtonActiveColor = Utils.colorDarken(themeColor, 0.8);
+var ButtonActiveColor = colorDarken(themeColor, 0.8);
 // 默认高度
 var ButtonHeight = '40';
 
@@ -119,7 +137,10 @@ var SwitchCircleBgColor = '#FFF';            // 点击后颜色
 
 
 const Config = {
+
     namespace,
+
+    sizeUnit,
     ButtonFontSize,
     ButtonFontColor,
     ButtonBgColor,
@@ -184,9 +205,8 @@ const Config = {
     SwitchBgColor,
     SwitchSelBgColor,
     SwitchBorderRadius,
-    SwitchCircleBgColor,
-
-
+    SwitchCircleBgColor
 };
+
 
 export default Config
