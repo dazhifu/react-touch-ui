@@ -53,7 +53,7 @@ export class ButtonExample extends BaseController {
         this.props.navigationController.popView()
     }
     onTouchTap(e) {
-      //  alert('点击button');
+       alert('点击button');
          this.props.navigationController.popView();
 
         e.preventDefault();
@@ -68,14 +68,11 @@ export class ButtonExample extends BaseController {
 
         console.log("ButtonExample ----- render!");
         return (
-
             <Container >
-
                 <NavBar title="ButtonExample" onLeftTouchTap={this.onTouchTapBack.bind(this)}>
                 </NavBar>
                 <VLayout isFill ={true} bgColor="#00f">
-
-                    <Button    ml="10" mt="10" w="100" h="40" bgColo1r="#ff0" fontColor1="#000" onTouchTap={this.onTouchTap.bind(this)}>
+                    <Button    ml="10" mt="10" w="100" h="40" bgColo1r="#ff0" fontColor="#000" onTouchTap={this.onTouchTap.bind(this)}>
                           确定
                     </Button>
                     <Button ml="10" mt="10" w="100" h="40">

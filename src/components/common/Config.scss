@@ -85,3 +85,11 @@ $navbar-line-height: ($navbar-height-px - 1);
 .aui-select-no {
   user-select: none;
 }
+
+$baseFontSize:   16 !default; // rem 基font size
+
+
+// 自适应  基准 宽度320
+@function px2rem($px) {
+  @return ($px / $baseFontSize) + rem;
+}

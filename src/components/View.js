@@ -267,11 +267,11 @@ export class View extends React.Component {
             {boxSizing: 'border-box'},
             flex,
             {color: fontColor},   // 字体颜色
-            {left: left},   //左
-            {top: top},   // 上
-            {right: right},   // 右
-            {bottom: bottom},   // 下
-            {fontSize: fontSize},
+            {left: Utils.sizeUnit(left) },   //左
+            {top: Utils.sizeUnit(top) },   // 上
+            {right: Utils.sizeUnit(right) },   // 右
+            {bottom:  Utils.sizeUnit(bottom)},   // 下
+            {fontSize: Utils.sizeUnit(fontSize)},
 
             baseStyle,
             style,

@@ -7,7 +7,13 @@ const kvSize = (key, x) => {
     var r, re; // 声明变量。
     re =  /^\d+$/;
     r = re.exec(x);
+
     if (r) {
+
+        if(Config.sizeUnit.indexOf("rem") != -1){
+
+            x = parseInt(x)/Config.baseFont;
+        }
         return {[key]: x+ Config.sizeUnit}
     } else {
         return {[key]: x}
@@ -21,7 +27,13 @@ const sizeUnit = ( x) => {
     var r, re; // 声明变量。
     re =  /^\d+$/;
     r = re.exec(x);
+
     if (r) {
+        if(Config.sizeUnit.indexOf("rem") != -1){
+
+            x = parseInt(x)/Config.baseFont;
+        }
+
         return  x+Config.sizeUnit
     } else {
         return x

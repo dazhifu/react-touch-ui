@@ -64,13 +64,13 @@ $auiTextColorWarn: #E64340;
     position: fixed;
     z-index: 5000;
     width: 80%;
-    max-width: 300px;
+    max-width: px2rem(300);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: $auiDialogBackgroundColor;
     text-align: center;
-    border-radius: 3px;
+    border-radius:  px2rem(3);
     overflow: hidden;
 }
 .aui-dialog__hd {
@@ -134,10 +134,10 @@ $auiTextColorWarn: #E64340;
 .aui-skin_android{
     .aui-dialog {
         text-align: left;
-        box-shadow: 0 6px 30px 0 rgba(0, 0, 0, .1);
+        box-shadow: 0  px2rem(6)  px2rem(30) 0 rgba(0, 0, 0, .1);
     }
     .aui-dialog__title{
-        font-size: 21px;
+        font-size:  px2rem(21);
     }
     .aui-dialog__hd{
         text-align: left;
@@ -145,7 +145,7 @@ $auiTextColorWarn: #E64340;
     .aui-dialog__bd{
         color:$auiTextColorGray;
         padding:.25em $auiDialogGapWidth 2em;
-        font-size: 17px;
+        font-size:  px2rem(17);
         text-align: left;
         &:first-child{
             padding:1.6em $auiDialogGapWidth 2em;
@@ -155,8 +155,8 @@ $auiTextColorWarn: #E64340;
     .aui-dialog__ft{
         display: block;
         text-align: right;
-        line-height: 42px;
-        font-size: 16px;
+        line-height:  px2rem(42);
+        font-size:  px2rem(16);
         padding:0 $auiDialogGapWidth .7em;
         &:after{
             display: none;

@@ -6,7 +6,7 @@
   display: inline-block;
   padding: $badge-padding;
   user-select: none;
-  border-radius: 100px;
+  border-radius: px2rem(100);
   vertical-align: middle;
   text-align: center;
   line-height:$badge-height;
