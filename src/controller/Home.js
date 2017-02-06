@@ -43,11 +43,14 @@ import { EventExample  }  from   "./EventExample.js"
 export class Home extends BaseController {
     constructor(props) {
         super(props);
+        //console.log('wwww', document.getElementsByTagName('html'))
+        //alert(document.body.clientWidth + "-")
 
     };
 
 
     onTouchTap(e, tag) {
+
 
 
         if (tag == 0) {

@@ -44,6 +44,8 @@ export class Scroll extends React.Component {
             fadeScrollbars: true,
             scrollX: true,
             scrollY: true,
+            disableTouch: false,    // 不加这俩句话   chrome设备上不能滚动
+            disablePointer: true
         },
         isHorizontal: false,
         // 是否自动填充剩余空间
@@ -132,7 +134,7 @@ export class Scroll extends React.Component {
             w1 = w;
         }
 
-    console.log("iipppppppppppppppppp",w1,w2,h1,h2);
+    //console.log("iipppppppppppppppppp",w1,w2,h1,h2);
         return (
 
 

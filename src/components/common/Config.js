@@ -16,11 +16,11 @@ const colorDarken = ( color, darken) => {
 
 };
 
-
 const namespace = "au"; // 'am'
 
-var sizeUnit = "px";
-
+//基准 宽度320
+var baseFont =  '16';
+var sizeUnit = "rem";         // view 不传左边默认值
 // 主题颜色
 var themeColor = "#f00";
 
@@ -139,7 +139,7 @@ var SwitchCircleBgColor = '#FFF';            // 点击后颜色
 const Config = {
 
     namespace,
-
+    baseFont,
     sizeUnit,
     ButtonFontSize,
     ButtonFontColor,

@@ -45,7 +45,8 @@ export class PullList  extends React.Component {
             pullDownCls: 'scrolled-up',
             pullUpCls: '',
             pullDownStyle: null,
-            pullUpStyle: null
+            pullUpStyle: null,
+
         };
 
         // 中间辅助值
@@ -73,6 +74,10 @@ export class PullList  extends React.Component {
     initIscroll() {
         // Create new iscroll instance here
         const {options} = this.props;
+
+        options.disableTouch = false;    // 不加这俩句话   chrome设备上不能滚动
+        options.disablePointer=  true;
+
         console.log("PullList---constructor", iScroll);
 
         const iScrollInstance = new iScroll(ReactDOM.findDOMNode(this), options);

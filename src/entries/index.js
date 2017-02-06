@@ -7,6 +7,7 @@ var injectTapEventPlugin = require("react-tap-event-plugin");   //
 import { Home }  from   "../controller/Home.js"
 
 
+
 import { NavigationController }  from   "../controller/common/NavigationController.js"
 
 injectTapEventPlugin();
@@ -18,6 +19,7 @@ export class App extends React.Component {
     };
 
     render() {
+
 
         const props = {
             rootView:  <Home tag="Home" > </Home>

@@ -1,4 +1,5 @@
-$auiActionSheetAndroidBorderRadius: 2px;
+@import "common/Config";
+$auiActionSheetAndroidBorderRadius: px2rem(2);
 $auiBgColorDefault: #EFEFF4;
 $auiBgColorActive: #ECECEC;
 $auiCellBorderColor:#D9D9D9;
@@ -31,14 +32,14 @@ $auiCellBorderColor:#D9D9D9;
     background-color: #FFFFFF;
 }
 .aui-actionsheet__action {
-    margin-top: 6px;
+    margin-top: px2rem(6);
     background-color: #FFFFFF;
 }
 .aui-actionsheet__cell {
     position: relative;
-    padding: 10px 0;
+    padding: px2rem(10) 0;
     text-align: center;
-    font-size: 18px;
+    font-size: px2rem(18);
     &:before {
         @include aui-setTopLine($auiCellBorderColor);
     }
@@ -62,7 +63,7 @@ $auiCellBorderColor:#D9D9D9;
         bottom: auto;
         transform: translate(-50%, -50%);
         //padding: 0 40px;
-        width: 274px;
+        width: px2rem(274);
         box-sizing: border-box;
         backface-visibility: hidden;
         background: transparent;
@@ -74,11 +75,11 @@ $auiCellBorderColor:#D9D9D9;
     }
     .aui-actionsheet__menu {
         border-radius: $auiActionSheetAndroidBorderRadius;
-        box-shadow: 0 6px 30px 0 rgba(0,0,0,.1);
+        box-shadow: 0 px2rem(6) px2rem(30) 0 rgba(0,0,0,.1);
     }
     .aui-actionsheet__cell {
-        padding: 13px 24px;
-        font-size: 16px;
+        padding: px2rem(13) px2rem(24);
+        font-size: px2rem(16);
         line-height: 1.4;
         text-align: left;
         &:first-child {

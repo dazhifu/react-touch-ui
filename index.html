@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />-->
+  <!--<meta name="viewport" content=content"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />-->
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <title>React Touch UI</title>
   <style>
@@ -63,35 +63,54 @@
     }
 
     html {
-      font-size : 20px;
+      font-size : 16px;
     }
-    /*@media only screen and (min-width: 401px){*/
-      /*html {*/
-        /*font-size: 25px !important;*/
-      /*}*/
-    /*}*/
-    /*@media only screen and (min-width: 428px){*/
-      /*html {*/
-        /*font-size: 26.75px !important;*/
-      /*}*/
-    /*}*/
-    /*@media only screen and (min-width: 481px){*/
-      /*html {*/
-        /*font-size: 30px !important;*/
-      /*}*/
-    /*}*/
-    /*@media only screen and (min-width: 569px){*/
-      /*html {*/
-        /*font-size: 35px !important;*/
-      /*}*/
-    /*}*/
-    /*@media only screen and (min-width: 641px){*/
-      /*html {*/
-        /*font-size: 40px !important;*/
-      /*}*/
-    /*}*/
+
+    @media only screen and (min-width: 375px){
+      html {
+        font-size: 17px !important;
+      }
+    }
+
+    @media only screen and (min-width: 401px){
+      html {
+        font-size: 18px !important;
+      }
+    }
+    @media only screen and (min-width: 428px){
+      html {
+        font-size: 19px !important;
+      }
+    }
+    @media only screen and (min-width: 481px){
+      html {
+        font-size: 24px !important;
+      }
+    }
+    @media only screen and (min-width: 569px){
+      html {
+        font-size: 28px !important;
+      }
+    }
+    @media only screen and (min-width: 641px){
+      html {
+        font-size: 32px !important;
+      }
+    }
+
+
+
+
+
+
   </style>
-  <script type="text/javascript" src="./cordova.js"></script>
+  <script type="text/javascript" >
+        function AD(x) {
+             return (x/16);
+        }
+
+  </script>
+  <!--<script type="text/javascript" src="./cordova.js"></script>-->
 </head>
 <body>
 <div id="root" class="wrap flex flex-v"></div>
