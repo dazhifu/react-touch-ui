@@ -16,9 +16,14 @@ input::-webkit-search-cancel-button {
   border: none;
   font-size: $badge-font-size;
   line-height: $input-height;
-  background-color: $input-background-color;
+  //background-color: $input-background-color;
+
+  background-color:transparent;
+  -webkit-appearance: none;
 
 
+  -webkit-tap-highlight-color:transparent;
+  border-color:transparent;
   color: $input-font-color;
   outline: none;
   // -webkit-user-select: text;

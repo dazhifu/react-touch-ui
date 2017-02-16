@@ -15,6 +15,7 @@ import { Button }  from   "../components/Button.js"
 import { Input }  from   "../components/Input.js"
 
 
+import { Scroll }  from   "../components/Scroll.js"
 
 import { Textarea }  from   "../components/Textarea.js"
 
@@ -77,7 +78,9 @@ export class InputExample extends BaseController {
 
                 <NavBar title="InputExample" onLeftTouchTap={this.onTouchTapBack.bind(this)}>
                 </NavBar>
-                <VLayout isFill={true} bgColor="#FFf">
+
+
+                    <Scroll w='100%' isFill={true} bgColor="#Ff0" >
 
 
                     <HLayout  >
@@ -87,14 +90,72 @@ export class InputExample extends BaseController {
                         </Input>
                     </HLayout>
 
-                    <HLayout >
-                        <Textarea mt="20" fontSize="18" ml="10" placeholder='你好'
-                                onChange={this.onChange.bind(this)}>
+                        <HLayout  >
+                            <Input  type="search" mt="20" fontSize="18" ml="10" placeholder='你好'
+                                    onChange={this.onChange.bind(this)}>
 
-                        </Textarea>
-                    </HLayout>
+                            </Input>
+                        </HLayout>
+                        <HLayout  >
+                            <Input  type="search" mt="20" fontSize="18" ml="10" placeholder='你好'
+                                    onChange={this.onChange.bind(this)}>
 
-                </VLayout>
+                            </Input>
+                        </HLayout>
+                        <HLayout  >
+                            <Input  type="search" mt="20" fontSize="18" ml="10" placeholder='你好'
+                                    onChange={this.onChange.bind(this)}>
+
+                            </Input>
+                        </HLayout>
+                        <HLayout  >
+                            <Input  type="search" mt="20" fontSize="18" ml="10" placeholder='你好'
+                                    onChange={this.onChange.bind(this)}>
+
+                            </Input>
+                        </HLayout>
+                        <HLayout  >
+                            <Input  type="search" mt="20" fontSize="18" ml="10" placeholder='你好'
+                                    onChange={this.onChange.bind(this)}>
+
+                            </Input>
+                        </HLayout>
+                        <HLayout  >
+                            <Input  type="search" mt="20" fontSize="18" ml="10" placeholder='你好'
+                                    onChange={this.onChange.bind(this)}>
+
+                            </Input>
+                        </HLayout>
+                        <HLayout  >
+                            <Input  type="search" mt="20" fontSize="18" ml="10" placeholder='你好'
+                                    onChange={this.onChange.bind(this)}>
+
+                            </Input>
+                        </HLayout>
+                        <HLayout  >
+                            <Input  type="search" mt="20" fontSize="18" ml="10" placeholder='你好'
+                                    onChange={this.onChange.bind(this)}>
+
+                            </Input>
+                        </HLayout>
+                        <HLayout  >
+                            <Input  type="search" mt="20" fontSize="18" ml="10" placeholder='你好'
+                                    onChange={this.onChange.bind(this)}>
+
+                            </Input>
+                        </HLayout>
+                        <HLayout  >
+                            <Input  type="search" mt="20" fontSize="18" ml="10" placeholder='你好'
+                                    onChange={this.onChange.bind(this)}>
+
+                            </Input>
+                        </HLayout>
+
+                    </Scroll>
+
+                <View  h = '40' w = '100' bgColor="#F0F" >
+                    </View>
+
 
             </Container>
 

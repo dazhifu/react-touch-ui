@@ -5,7 +5,7 @@ import { NavBar }  from   "../components/NavBar.js"
 import { View }  from   "../components/View.js"
 import {  VLayout}  from   "../components/VLayout.js"
 import {  Container}  from   "../components/Container.js"
-
+import {  Img}  from   "../components/Img.js"
 import { Button }  from   "../components/Button.js"
 
 import { Test1Example }  from   "./Test1Example.js"
@@ -13,7 +13,7 @@ import { Test1Example }  from   "./Test1Example.js"
 import { BaseController }  from   "./common/BaseController.js"
 
 import { addEventListener,removeEventListener,triggerEvent }  from   "../utils/Event.js"
-
+import img from '../components/images/pull-icon.png'
 //
 export class TestExample extends BaseController {
 
@@ -66,7 +66,9 @@ export class TestExample extends BaseController {
                 <NavBar title="ButtonExample" onLeftTouchTap={this.onTouchTapBack.bind(this)}>
                 </NavBar>
                 <VLayout isFill ={true} bgColor="#00f">
+                    <Img w="100" h="100" src={img}>
 
+                        </Img>
 
                     <Button    ml="10" mt="10" w="100" h="40" bgColo1r="#ff0" fontColor1="#000" onTouchTap={this.onTouchTap.bind(this)}>
                           确定
