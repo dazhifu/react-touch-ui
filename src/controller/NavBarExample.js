@@ -22,6 +22,8 @@ export class NavBarExample extends BaseController {
     constructor(props) {
         super(props);
 
+        console.log('00000', this.props.tag)
+
     }
     /*
      * 功能 : 组件渲染完成通知函数

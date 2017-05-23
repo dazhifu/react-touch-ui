@@ -77,7 +77,7 @@ export class PullList  extends React.Component {
 
         options.disableTouch = false;    // 不加这俩句话   chrome设备上不能滚动
         options.disablePointer=  true;
-
+        options.startY = 100;
         console.log("PullList---constructor", iScroll);
 
         const iScrollInstance = new iScroll(ReactDOM.findDOMNode(this), options);
@@ -372,6 +372,8 @@ export class PullList  extends React.Component {
                     isScrolling: false
                 }, () => {
                     this.lock = false;
+
+                    //iScroll.scrollBy(0, iScroll.maxScrollY, 0);
                     iScroll.refresh();
                 });
             });
@@ -461,7 +463,7 @@ PullList.propTypes = {
     pullUpText: PropTypes.array,
     pullDownThreshold: PropTypes.number,
     pullUpThreshold: PropTypes.number,
-    handleRefresh: PropTypes.func, //刷新后回调函数，定义要处理的逻辑，比如加载更多，刷新等
+    handleRefresh: PropTypes.func, //刷新后回调函数，定义要处理的逻辑，比如加载更多，刷新等       调用callback(); 停止刷新
     isFill: PropTypes.bool
 };
 

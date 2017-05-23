@@ -40,6 +40,13 @@ import { TestExample  }  from   "./TestExample.js"
 
 import { BaseController }  from   "./common/BaseController.js"
 import { EventExample  }  from   "./EventExample.js"
+
+import { SHExample  }  from   "./SHExample.js"
+import {request} from "../utils/Request.js"
+
+
+
+
 export class Home extends BaseController {
     constructor(props) {
         super(props);
@@ -50,15 +57,22 @@ export class Home extends BaseController {
 
 
     onTouchTap(e, tag) {
+        var self = this
 
-
-
+        //request('http://www.baidu.com','').then(
+        //    function(re) {
+        //
+        //        RESULE
+        //        self.state.RE = re;
+        //        self.state.
+        //        console.log('ooooooooo',re)
+        //
+        //    }
+        //)
         if (tag == 0) {
             this.props.navigationController.pushView(
-                <NavBarExample  />,
-                {
-                    tag: 'NavBarExample'
-                });
+                <NavBarExample  tag="Test3Example" > </NavBarExample>)
+
 
         } else if (tag == 1) {
             this.props.navigationController.pushView(
@@ -130,6 +144,12 @@ export class Home extends BaseController {
                 <EventExample tag="EventExample"> </EventExample>
             );
         }
+        else if (tag == 18) {
+            this.props.navigationController.pushView(
+                <SHExample tag="SHExample"> </SHExample>
+            );
+        }
+
 
     }
 
@@ -223,7 +243,7 @@ export class Home extends BaseController {
                 title: 'EventExample',
                 indicator: 'true',
             }, {
-                title: 'test',
+                title: 'SHExample',
                 indicator: 'true',
             }, {
                 title: 'test',
@@ -238,8 +258,9 @@ export class Home extends BaseController {
 
             <Container bgColor="#fff" style={{display:'flex'}}>
 
-                <NavBar title="AUI"
+                <NavBar title="AUI22"
                         leftIcon={null}
+
 
                         onTouchTap={this.onTouchTap.bind(this)}>
                 </NavBar>

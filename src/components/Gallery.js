@@ -41,6 +41,8 @@ export class Gallery extends React.Component {
             scrollX: true,
             scrollY: false,
             momentum: false,
+            disableMouse: true,
+            disablePointer: true,
             snap: true,
             snapSpeed: 400,
             keyBindings: true,

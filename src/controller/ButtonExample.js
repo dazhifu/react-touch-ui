@@ -18,6 +18,9 @@ export class ButtonExample extends BaseController {
      */
     constructor(props) {
         super(props);
+        this.state = {
+            bgColor: '#F00'
+        };
 
     }
     /*
@@ -50,11 +53,14 @@ export class ButtonExample extends BaseController {
 
 
     onTouchTapBack(e) {
-        this.props.navigationController.popView()
+       this.props.navigationController.popView()
+
     }
     onTouchTap(e) {
-       alert('点击button');
-         this.props.navigationController.popView();
+       //alert('点击button');
+        // this.props.navigationController.popView();
+        console.log('777777')
+        this.setState({ bgColor: '#0F0'})
 
         e.preventDefault();
 
@@ -66,14 +72,14 @@ export class ButtonExample extends BaseController {
 
     render() {
 
-        console.log("ButtonExample ----- render!");
+        console.log("ButtonExample ----- render!",this.state.bgColor);
         return (
             <Container >
                 <NavBar title="ButtonExample" onLeftTouchTap={this.onTouchTapBack.bind(this)}>
                 </NavBar>
                 <VLayout isFill ={true} bgColor="#00f">
-                    <Button    ml="10" mt="10" w="100" h="40" bgColo1r="#ff0" fontColor="#000" onTouchTap={this.onTouchTap.bind(this)}>
-                          确定
+                    <Button    ml="10" mt="10" w="100" h="40" bgColo1r={this.state.bgColor} fontColor="#000" onTouchTap={this.onTouchTap.bind(this)}>
+                        确定
                     </Button>
                     <Button ml="10" mt="10" w="100" h="40">
                         返回

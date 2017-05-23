@@ -37,8 +37,25 @@ export class ButtonGroup extends React.Component {
         selIndex: 0
     };
 
+    /*
+     * 功能:  初始化
+     * 参数:  props
+     * 返回:  null
+     * 注意:  更新不会调研
+     */
     constructor(props) {
         super(props);
+        this.componentWillReceiveProps(props)
+    };
+
+    /*
+     * 功能:  Props 将改变的时候调用
+     * 参数:  nextProps
+     * 返回:  null
+     * 注意:  初始化不会调用
+     */
+    componentWillReceiveProps(nextProps) {
+
         const {
             fontSize,
             fontColor,
@@ -59,8 +76,8 @@ export class ButtonGroup extends React.Component {
             p:p,
             selIndex:selIndex
         };
-    };
 
+    }
 
 
     /*
@@ -134,7 +151,7 @@ export class ButtonGroup extends React.Component {
             p,
             ...props
             } = this.props;
-
+        console.log('ButtonGroup---render',this.state.borderColor)
         var itemsch = [];
         for (var i = 0; i < items.length; i++) {
 

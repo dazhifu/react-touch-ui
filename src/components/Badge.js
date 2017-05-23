@@ -29,11 +29,18 @@ export class Badge extends React.Component {
 
     constructor(props) {
         super(props);
+
+    };
+
+    render() {
+
         const {
             fontSize,
             fontColor,
             bgColor,
-            h
+            h,
+            ...props
+
             } = this.props;
         this.state = {
             fontSize: fontSize,
@@ -41,16 +48,7 @@ export class Badge extends React.Component {
             bgColor: bgColor,
             h: h
         };
-    };
 
-    render() {
-        const {
-            fontSize,    // 字体大小
-            fontColor,   // 字体颜色
-            bgColor,    // 背景颜色
-            h,          // 高度
-            ...props
-            } = this.props;
 
         var hStyle;
         hStyle = assign(

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+require("../prototype/css/common.css");
 
 var injectTapEventPlugin = require("react-tap-event-plugin");   //
 
@@ -9,6 +10,9 @@ import { Home }  from   "../controller/Home.js"
 
 
 import { NavigationController }  from   "../controller/common/NavigationController.js"
+
+
+
 
 injectTapEventPlugin();
 

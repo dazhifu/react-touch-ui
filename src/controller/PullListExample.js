@@ -121,7 +121,7 @@ export class PullListExample extends BaseController {
                     <PullList handleRefresh={this.handleRefresh.bind(this)} isFill={true} >
                         <ul className="example-paging">
                             {list.map((item) =>
-                                <li>{item.id}</li>
+                                <li>{item.name}</li>
                             )}
                         </ul>
                     </PullList>

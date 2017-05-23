@@ -49,7 +49,7 @@ function triggerEvent(eventType, arg) {
     } else{
         console.warn(eventType +' event undefine or removed'  )
     }
-
+    
 
 }
 export  {addEventListener,removeEventListener,triggerEvent}

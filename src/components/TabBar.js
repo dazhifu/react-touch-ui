@@ -30,7 +30,7 @@ export class TabBar extends React.Component {
             tabitems: [],
             selIndex: this.props.selIndex,
         };
-        this.state.selState = {false};
+        this.state.selState = false;
         this.state.selState[this.props.selIndex] = true;
         this.state.selIndex = this.props.selIndex;
 
@@ -64,7 +64,7 @@ export class TabBar extends React.Component {
 
     onTouchTap(e, tag) {
 
-        this.state.selState = {false};
+        this.state.selState = false;
         this.state.selState[tag] = true;
         this.state.selIndex = tag;
         this.forceUpdate();

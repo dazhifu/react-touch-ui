@@ -24,24 +24,43 @@ export class Button extends React.Component {
         h:Config.ButtonHeight
     };
 
+
+    /*
+     * 功能:  初始化
+     * 参数:  props
+     * 返回:  null
+     * 注意:  更新不会调研
+     */
     constructor(props) {
-       super(props);
+        super(props);
+        this.componentWillReceiveProps(props)
+    };
+
+    /*
+     * 功能:  Props 将改变的时候调用
+     * 参数:  nextProps
+     * 返回:  null
+     * 注意:  初始化不会调用
+     */
+    componentWillReceiveProps(nextProps) {
         const {
             fontSize,
             fontColor,
             bgColor,
-            activeColor,
-            h
+            activeColor
             } = this.props;
+
+
         this.state = {
             fontSize: fontSize,
             fontColor: fontColor,
             bgTempColor: bgColor,
             bgColor: bgColor,
             activeColor: activeColor,
-            h: h
+            h: this.props.h
         };
-    };
+    }
+
 
 
     handleTouchStart(e) {
@@ -50,6 +69,7 @@ export class Button extends React.Component {
         this.forceUpdate();
         e.preventDefault();
     }
+
 
     handleTouchCancel(e) {
 
@@ -65,12 +85,17 @@ export class Button extends React.Component {
     }
 
     render() {
+
+        console.log('ppppppp')
         const {
-            fontSize,    // 字体大小
-            fontColor,   // 字体颜色
+            fontSize,
+            fontColor,
             bgColor,
+            activeColor,
             ...props
             } = this.props;
+
+
 
         return (
             <View

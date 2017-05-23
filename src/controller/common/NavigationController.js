@@ -22,6 +22,7 @@ export class NavigationController extends React.Component {
     }
 
     genBaseController(ctrl) {
+        console.log('uuuuuuuuuuuuuuuu6666666',ctrl)
         var newCtrl = React.cloneElement(ctrl, {
             navigationController: this,
             nav: this
@@ -31,6 +32,7 @@ export class NavigationController extends React.Component {
         div.className = 'aui-ReactNavigationControllerViewContent';
         this.state.rootDom.appendChild(div);
         ReactDOM.render(newCtrl, div)
+        console.log('uuuuuuuuuuuuuuuu',newCtrl)
 
     }
 

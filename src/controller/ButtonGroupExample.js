@@ -18,6 +18,11 @@ export class ButtonGroupExample extends BaseController{
      */
     constructor(props) {
         super(props);
+        this.state = {
+            color : '#f00'
+
+        };
+
 
     }
     /*
@@ -54,11 +59,32 @@ export class ButtonGroupExample extends BaseController{
     }
 
     onSwich(e,index) {
-        console.log('点击buttongroup', index);
+        console.log('点击buttongroup', index, this);
+
+        if(index == 1) {
+
+            this.setState ({
+                color : '#ff0'
+
+            });
+        } else if  (index ==2) {
+
+            this.setState ({
+                color : '#0f0'
+
+            });
+        }else if  (index ==3) {
+
+            this.setState ( {
+                color : '#0ff'
+
+            });
+        }
+        console.log('ButtonGroupExample---onSwich',this.state.color)
     }
 
     render() {
-
+        console.log('ButtonGroupExample---render')
 
 
         return (
@@ -71,7 +97,7 @@ export class ButtonGroupExample extends BaseController{
 
 
                     <HLayout >
-                        <ButtonGroup mt='10'   ml='10' borderColor = '#0f0' selBgColor="#0f0" items = {['日','月','季','年'] } fontSize='18' p="10" onSwich={this.onSwich.bind(this)}>
+                        <ButtonGroup mt='10'   ml='10' borderColor = {this.state.color} selBgColor="#0f0" items = {['日','月','季','年'] } fontSize='18' p="10" onSwich={this.onSwich.bind(this)}>
 
                         </ButtonGroup>
                     </HLayout>
